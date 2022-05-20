@@ -12,7 +12,9 @@ import {
   formatQuerystringParameters,
 } from './url';
 
-function fromEntries<T>(iterable: IterableIterator<[string, T]>): {
+function fromEntries<T>(
+  iterable: IterableIterator<[string, T]>
+): {
   [key: string]: T;
 } {
   return [...iterable].reduce<{ [key: string]: T }>(
